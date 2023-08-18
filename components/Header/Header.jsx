@@ -11,7 +11,7 @@ const Header = () => {
         <span class="ml-3 text-xl">Todos List</span>
       </a>
       <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a href={''} class="mr-5 hover:text-gray-900">Home</a>
+        <a href={'/'} class="mr-5 hover:text-gray-900">Home</a>
         <a href={''} class="mr-5 hover:text-gray-900">About</a>
         <a href={'/todos'} class="mr-5 hover:text-gray-900">My Todos</a>
         <a href={''} class="mr-5 hover:text-gray-900">Contact us</a>
