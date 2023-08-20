@@ -13,7 +13,7 @@ export default function Home() {
     if (todos){
       let todoJson = JSON.parse(todos)
       if (todoJson.filter(value=>{ return value.title==todo.title }).length > 0 ){
-        // If the length of the filtered array is greater than 0, it means there is at least one todo with the same title as the current todo being added. This indicates that the todo already exists, and the code displays an alert with the message "Todo already exists."
+        // note If the length of the filtered array is greater than 0, it means there is at least one todo with the same title as the current todo being added. This indicates that the todo already exists, and the code displays an alert with the message "Todo already exists."
         alert('Todo already exits')
       }
       else { todoJson.push(todo)
