@@ -14,7 +14,7 @@ export default function Home() {
       let todoJson = JSON.parse(todos)
       if (todoJson.filter(value=>{ return value.title==todo.title }).length > 0 ){
         // note If the length of the filtered array is greater than 0, it means there is at least one todo with the same title as the current todo being added. This indicates that the todo already exists, and the code displays an alert with the message "Todo already exists."
-        alert('Todo already exits')
+        alert('Your Todo already exits')
       }
       else { todoJson.push(todo)
         localStorage.setItem('todos',JSON.stringify(todoJson))
@@ -47,7 +47,7 @@ export default function Home() {
         <input onChange={onChange} value={todo.title} type="text" id="title" name="title" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
       </div>
       <div class="relative mb-4">
-        <label for="des" class="leading-7 text-sm text-gray-600">ToDo text</label>
+        <label for="des" class="leading-7 text-sm text-gray-600">ToDos text</label>
         <input  onChange={onChange}  value={todo.des} type="text" id="des" name="des" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
       </div>
       <button  onClick={addTodo} class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none w-fit hover:bg-indigo-600 rounded text-lg">Add Todo</button>
